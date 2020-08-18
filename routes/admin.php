@@ -29,3 +29,20 @@ Route::group(['prefix' => 'users', 'middleware'=>'auth'], function (){
 });
 
 Route::resource('news', 'NewsController');
+Route::get('data', 'DataController@getData');
+
+
+    Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function()
+    {
+        Route::group(['prefix'=>'data', 'middleware' => 'web'], function (){
+        /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+
+    Route::get ('insert','DataController@insertData');
+    Route::get('create','DataController@createData');
+    Route::get('create2','DataController@createData2');
+    Route::post('store','DataController@storeData')->name('data.store');
+
+    });
+});
+
+

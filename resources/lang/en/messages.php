@@ -17,4 +17,5 @@ return [
     'about' => 'About',
     'portfolio' => 'Portfolio',
     'contact' => 'Contact',
+    'max_name_error' => 'max name error',
 ];
