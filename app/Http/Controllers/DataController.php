@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\storeRequest;
 use App\User;
 use \Validator;
 use Illuminate\Http\Request;
@@ -32,16 +33,7 @@ class DataController extends Controller
         return view('create2');
     }
 
-    public function storeData(Request $request){
-
-        $rules= $this -> getRules();
-        $messages= $this -> getMessages();
-
-        $validator= Validator::make($request->all(),$rules,$messages);
-
-        if ($validator -> fails()){
-            return redirect()->back()->withErrors($validator)->withInput($request->all());
-        }
+    public function storeData(storeRequest $request){
 
         User::create([
            'name' => $request-> name,
@@ -52,19 +44,5 @@ class DataController extends Controller
 
         return redirect()->back()->with(['success'=>'all right']);
     }
-    protected function getRules(){
-        return $rules=[
-            'name'=> 'required| max:10| unique:users',
-            'email'=> 'required',
-            'password'=> 'required',
-            'phone'=> 'required|numeric',
-        ];
-    }
 
-    protected function getMessages(){
-        return $messages=[
-            'name.max'=>trans('messages.max_name_error'),
-
-        ];
-    }
 }
