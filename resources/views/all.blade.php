@@ -44,13 +44,13 @@
                     Language
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 
-                    <a class="dropdown-item"  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                        {{ $properties['native'] }}
-                    </a>
+                        <a class="dropdown-item"  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            {{ $properties['native'] }}
+                        </a>
 
-            @endforeach
+                    @endforeach
 
                 </div>
             </li>
@@ -60,76 +60,32 @@
     </div>
 </nav>
 
-@if(Session::has('success'))
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">{{trans('messages.offer name')}}</th>
+        {{--<th scope="col">{{trans('messages.offer name ar')}}</th>--}}
+        <th scope="col">{{trans('messages.offer price')}}</th>
+        {{--<th scope="col">{{trans('messages.offer details en')}}</th>--}}
+        <th scope="col">{{trans('messages.offer details')}}</th>
+    </tr>
+    </thead>
+    <tbody>
 
-    <div class="alert alert-primary" role="alert">
-        {{Session::get('success')}}
-    </div>
-@endif
-<div class="container-contact100">
-    <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+    @foreach($offers as $offer)
+    <tr>
+        <th scope="row">{{$offer -> id}}</th>
+        {{--<td>{{$offer -> name_en}}</td>--}}
+        <td>{{$offer -> name}}</td>
+        <td>{{$offer -> price}}</td>
+        <td>{{$offer -> details}}</td>
+        {{--<td>{{$offer -> details_ar}}</td>--}}
+    </tr>
+        @endforeach
 
-
-    <div class="wrap-contact100">
-        <form method="post" action="{{route('data.store')}}" class="contact100-form validate-form">
-            @csrf
-				<span class="contact100-form-title">
-					Enter Data
-				</span>
-
-            <div class="wrap-input100 validate-input" >
-                <input class="input100" type="text" name="name_en" placeholder="{{trans('messages.offer name en')}}">
-                <span class="focus-input100-1"></span>
-                <span class="focus-input100-2"></span>
-                @error('name_en')
-                <small class="form-text text-danger">{{$message}}</small>
-                @enderror
-            </div>
-
-            <div class="wrap-input100 validate-input" >
-                <input class="input100" type="text" name="name_ar" placeholder="{{trans('messages.offer name ar')}}">
-                <span class="focus-input100-1"></span>
-                <span class="focus-input100-2"></span>
-                @error('name_ar')
-                <small class="form-text text-danger">{{$message}}</small>
-                @enderror
-            </div>
-
-            <div class="wrap-input100 validate-input" >
-                <input class="input100" type="text" name="price" placeholder="price">
-                <span class="focus-input100-1"></span>
-                <span class="focus-input100-2"></span>
-                @error('price')
-                <small class="form-text text-danger">{{$message}}</small>
-                @enderror
-            </div>
-
-
-            <div class="wrap-input100 validate-input" >
-                <textarea class="input100" name="details_en" placeholder="{{trans('messages.offer details en')}}"></textarea>
-                <span class="focus-input100-1"></span>
-                <span class="focus-input100-2"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" >
-                <textarea class="input100" name="details_ar" placeholder="{{trans('messages.offer details ar')}}"></textarea>
-                <span class="focus-input100-1"></span>
-                <span class="focus-input100-2"></span>
-            </div>
-
-
-
-
-
-            <div class="container-contact100-form-btn">
-                <button class="contact100-form-btn">
-                    Insert
-                </button>
-            </div>
-        </form>
-    </div>
-</div>
-
+    </tbody>
+</table>
 
 
 <div id="dropDownSelect1"></div>

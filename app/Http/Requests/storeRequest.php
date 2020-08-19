@@ -24,10 +24,11 @@ class storeRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required| max:1| unique:users',
-            'email'=> 'required',
-            'password'=> 'required',
-            'phone'=> 'required|numeric',
+            'name_en'=> 'required| unique:offers',
+            'name_ar'=> 'required| unique:offers',
+            'price'=> 'required|numeric',
+
+
         ];
     }
 
@@ -35,6 +36,7 @@ class storeRequest extends FormRequest
     {
         return $messages=[
             'name.max'=>trans('messages.max_name_error'),
+            'price.numeric'=>trans('messages.price numeric error'),
 
         ];
     }

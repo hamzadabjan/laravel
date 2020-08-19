@@ -18,4 +18,12 @@ return [
     'portfolio' => 'Portfolio',
     'contact' => 'Contact',
     'max_name_error' => 'max name error',
+    'offer name en' =>'offer name',
+    'offer price' => 'offer price',
+    'offer details en' => 'offer details',
+    'offer name ar' => 'اسم المنتج',
+    'offer details ar' => 'تفاصيل المنتج',
+    'offer name' => 'Offer Name',
+    'offer details' => 'Offer Details',
+
 ];

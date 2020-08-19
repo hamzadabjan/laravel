@@ -18,5 +18,11 @@ return [
     'portfolio' => 'الأعمال السابقة',
     'contact' => 'تواصل',
     'max_name_error' => 'لقد تجاوزت عدد الأحرف المسموحة في الاسم',
+    'price numeric error' => 'السعر يجب أن يكون رقم',
+    'offer name ar' => 'اسم المنتج',
+    'offer price' => 'سعر المنتج',
+    'offer details ar' => 'تفاصيل المنتج',
+    'offer name' => 'اسم المنتج',
+    'offer details' => 'تفاصيل المنتج',
 
 ];

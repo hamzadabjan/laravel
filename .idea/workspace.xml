@@ -22,6 +22,12 @@
     <list default="true" id="60e7ea04-b952-4695-9461-578e90966486" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/storeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/storeRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/create2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +165,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -174,17 +180,17 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel\resources\views" />
+      <recent name="C:\xampp\htdocs\laravel\public" />
+      <recent name="C:\xampp\htdocs\laravel\public\vendor" />
+      <recent name="C:\xampp\htdocs\laravel\public\js" />
+      <recent name="C:\xampp\htdocs\laravel\vendor" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laravel\public\vendor" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers\Front" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel\public" />
-      <recent name="C:\xampp\htdocs\laravel\resources\views" />
-      <recent name="C:\xampp\htdocs\laravel\public\vendor" />
-      <recent name="C:\xampp\htdocs\laravel\public\js" />
-      <recent name="C:\xampp\htdocs\laravel\vendor" />
     </key>
   </component>
   <component name="RunManager">
@@ -233,7 +239,10 @@
       <workItem from="1597691825566" duration="6297000" />
       <workItem from="1597734079254" duration="289000" />
       <workItem from="1597734409002" duration="3974000" />
-      <workItem from="1597740648613" duration="2794000" />
+      <workItem from="1597740648613" duration="3175000" />
+      <workItem from="1597779282519" duration="2489000" />
+      <workItem from="1597820940089" duration="6975000" />
+      <workItem from="1597867510433" duration="1410000" />
     </task>
     <servers />
   </component>

@@ -41,7 +41,7 @@ Route::get('data', 'DataController@getData');
     Route::get('create','DataController@createData');
     Route::get('create2','DataController@createData2');
     Route::post('store','DataController@storeData')->name('data.store');
-
+    Route::get('all','DataController@getAllOffers');
     });
 });
 
