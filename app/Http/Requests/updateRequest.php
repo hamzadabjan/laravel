@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class storeRequest extends FormRequest
+class updateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,11 @@ class storeRequest extends FormRequest
     public function rules()
     {
         return [
-            'name_en'=> 'required|max:100|unique:offers',
-            'name_ar'=> 'required|max:100|unique:offers',
+            'name_en'=> 'required|max:100',
+            'name_ar'=> 'required|max:100',
             'price'=> 'required|numeric',
             'details_en'=> 'required|max:100',
             'details_ar'=> 'required|max:100',
-            'photo'=> 'required',
 
 
         ];
@@ -39,10 +38,8 @@ class storeRequest extends FormRequest
     {
         return $messages=[
             'name_en.max'=>trans('messages.max'),
-            'name_en.unique'=>trans('messages.unique'),
             'name_en.required'=>trans('messages.required'),
             'name_ar.max'=>trans('messages.max_name_error'),
-            'name_ar.unique'=>trans('messages.unique'),
             'name_ar.required'=>trans('messages.required'),
             'price.required'=>trans('messages.required'),
             'details_en.required'=>trans('messages.required'),
@@ -50,7 +47,6 @@ class storeRequest extends FormRequest
             'details_ar.required'=>trans('messages.required'),
             'details_ar.max'=>trans('messages.max'),
             'price.numeric'=>trans('messages.price numeric error'),
-            'photo.required'=>trans('messages.required'),
 
         ];
     }

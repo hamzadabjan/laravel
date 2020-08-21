@@ -17,7 +17,7 @@ return [
     'about' => 'About',
     'portfolio' => 'Portfolio',
     'contact' => 'Contact',
-    'max_name_error' => 'max name error',
+    'max' => 'the limit allowed is 100 ch. ',
     'offer name en' =>'offer name',
     'offer price' => 'offer price',
     'offer details en' => 'offer details',
@@ -25,5 +25,12 @@ return [
     'offer details ar' => 'تفاصيل المنتج',
     'offer name' => 'Offer Name',
     'offer details' => 'Offer Details',
+    'edit' => 'edit',
+    'delete' => 'delete',
+    'options' => 'options',
+    'edit data' => 'Edit Data',
+    'required' => 'this field is required',
+    'unique' => 'this name must be unique',
+    'choose offer photo' => 'choose offer photo',
 
 ];

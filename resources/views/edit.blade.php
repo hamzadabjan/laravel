@@ -71,23 +71,14 @@
 
 
     <div class="wrap-contact100">
-        <form method="post" action="{{route('data.store')}}" class="contact100-form" enctype="multipart/form-data">
+        <form method="post" action="{{route('update.offer', ['offer_id' => $offer->id])}}" class="contact100-form">
             @csrf
 				<span class="contact100-form-title">
-					Enter Data
+					{{trans('messages.edit data')}}
 				</span>
 
             <div class="wrap-input100 validate-input" >
-                <input class="input100" type="file" name="photo" placeholder="{{trans('messages.choose offer photo')}}">
-                <span class="focus-input100-1"></span>
-                <span class="focus-input100-2"></span>
-                @error('photo')
-                <small class="form-text text-danger">{{$message}}</small>
-                @enderror
-            </div>
-
-            <div class="wrap-input100 validate-input" >
-                <input class="input100" type="text" name="name_en" placeholder="{{trans('messages.offer name en')}}">
+                <input class="input100" type="text" name="name_en" value="{{$offer->name_en}}" placeholder="{{trans('messages.offer name en')}}">
                 <span class="focus-input100-1"></span>
                 <span class="focus-input100-2"></span>
                 @error('name_en')
@@ -96,7 +87,7 @@
             </div>
 
             <div class="wrap-input100 validate-input" >
-                <input class="input100" type="text" name="name_ar" placeholder="{{trans('messages.offer name ar')}}">
+                <input class="input100" type="text" name="name_ar" value="{{$offer->name_ar}}" placeholder="{{trans('messages.offer name ar')}}">
                 <span class="focus-input100-1"></span>
                 <span class="focus-input100-2"></span>
                 @error('name_ar')
@@ -105,7 +96,7 @@
             </div>
 
             <div class="wrap-input100 validate-input" >
-                <input class="input100" type="text" name="price" placeholder="price">
+                <input class="input100" type="text" value="{{$offer->price}}" name="price" placeholder="price">
                 <span class="focus-input100-1"></span>
                 <span class="focus-input100-2"></span>
                 @error('price')
@@ -115,13 +106,13 @@
 
 
             <div class="wrap-input100 validate-input" >
-                <textarea class="input100" name="details_en" placeholder="{{trans('messages.offer details en')}}"></textarea>
+                <input class="input100" type="text" name="details_en" value="{{$offer->details_en}}" placeholder="{{trans('messages.offer details en')}}"></input>
                 <span class="focus-input100-1"></span>
                 <span class="focus-input100-2"></span>
             </div>
 
             <div class="wrap-input100 validate-input" >
-                <textarea class="input100" name="details_ar" placeholder="{{trans('messages.offer details ar')}}"></textarea>
+                <input class="input100" type="text" name="details_ar" value="{{$offer->details_ar}}" placeholder="{{trans('messages.offer details ar')}}"></input>
                 <span class="focus-input100-1"></span>
                 <span class="focus-input100-2"></span>
             </div>

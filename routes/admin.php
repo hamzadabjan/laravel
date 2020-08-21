@@ -42,6 +42,9 @@ Route::get('data', 'DataController@getData');
     Route::get('create2','DataController@createData2');
     Route::post('store','DataController@storeData')->name('data.store');
     Route::get('all','DataController@getAllOffers');
+    Route::get('edit/{offer_id}','DataController@editOffer')->name('edit.offer');
+    Route::post('update/{offer_id}','DataController@updateOffer')->name('update.offer');
+    Route::get('delete/{offer_id}','DataController@editOffer')->name('delete.offer');
     });
 });
 

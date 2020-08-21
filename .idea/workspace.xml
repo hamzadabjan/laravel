@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60e7ea04-b952-4695-9461-578e90966486" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/updateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/storeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/storeRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/all.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/create2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create2.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
@@ -165,7 +169,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -181,13 +185,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel\app\Http\Requests" />
       <recent name="C:\xampp\htdocs\laravel\resources\views" />
       <recent name="C:\xampp\htdocs\laravel\public" />
       <recent name="C:\xampp\htdocs\laravel\public\vendor" />
       <recent name="C:\xampp\htdocs\laravel\public\js" />
-      <recent name="C:\xampp\htdocs\laravel\vendor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel\app\OfferTrait" />
       <recent name="C:\xampp\htdocs\laravel\public\vendor" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers\Front" />
@@ -242,7 +247,12 @@
       <workItem from="1597740648613" duration="3175000" />
       <workItem from="1597779282519" duration="2489000" />
       <workItem from="1597820940089" duration="6975000" />
-      <workItem from="1597867510433" duration="1410000" />
+      <workItem from="1597867510433" duration="2700000" />
+      <workItem from="1597872651545" duration="593000" />
+      <workItem from="1597984986993" duration="12217000" />
+      <workItem from="1598016940633" duration="753000" />
+      <workItem from="1598019028599" duration="2786000" />
+      <workItem from="1598035984773" duration="3405000" />
     </task>
     <servers />
   </component>
@@ -294,18 +304,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597430803210" />
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1598037006259">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598037006259" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1597403663908">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597403663908" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598040030695">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598040030695" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1597736464437">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1597736464437" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597402729296">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598036980630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597402729296" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598036980630" />
     <state x="405" y="276" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596867875716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -69,6 +69,7 @@
         <th scope="col">{{trans('messages.offer price')}}</th>
         {{--<th scope="col">{{trans('messages.offer details en')}}</th>--}}
         <th scope="col">{{trans('messages.offer details')}}</th>
+        <th scope="col">{{trans('messages.options')}}</th>
     </tr>
     </thead>
     <tbody>
@@ -80,6 +81,8 @@
         <td>{{$offer -> name}}</td>
         <td>{{$offer -> price}}</td>
         <td>{{$offer -> details}}</td>
+        <td><a href="{{route('edit.offer',['offer_id' => $offer -> id])}}" type="button" class="btn btn-primary">{{trans('messages.edit')}}</a> - <a href="{{route('delete.offer',['offer_id' => $offer -> id])}}" type="button" class="btn btn-danger">
+            {{trans('messages.delete')}}</a></td>
         {{--<td>{{$offer -> details_ar}}</td>--}}
     </tr>
         @endforeach
