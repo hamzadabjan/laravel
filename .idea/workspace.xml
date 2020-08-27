@@ -19,18 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60e7ea04-b952-4695-9461-578e90966486" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/updateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
+    <list default="true" id="60e7ea04-b952-4695-9461-578e90966486" name="Default Changelist" comment="update data and upload image to database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/storeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/storeRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Offer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/create2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create2.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +162,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -184,18 +177,18 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel\app\Http\Requests" />
-      <recent name="C:\xampp\htdocs\laravel\resources\views" />
-      <recent name="C:\xampp\htdocs\laravel\public" />
-      <recent name="C:\xampp\htdocs\laravel\public\vendor" />
-      <recent name="C:\xampp\htdocs\laravel\public\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laravel\app\OfferTrait" />
       <recent name="C:\xampp\htdocs\laravel\public\vendor" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers\Front" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel\resources\views" />
+      <recent name="C:\xampp\htdocs\laravel\app\Http\Requests" />
+      <recent name="C:\xampp\htdocs\laravel\public" />
+      <recent name="C:\xampp\htdocs\laravel\public\vendor" />
+      <recent name="C:\xampp\htdocs\laravel\public\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -252,7 +245,11 @@
       <workItem from="1597984986993" duration="12217000" />
       <workItem from="1598016940633" duration="753000" />
       <workItem from="1598019028599" duration="2786000" />
-      <workItem from="1598035984773" duration="3405000" />
+      <workItem from="1598035984773" duration="3669000" />
+      <workItem from="1598095698055" duration="1240000" />
+      <workItem from="1598111991788" duration="1628000" />
+      <workItem from="1598120635786" duration="852000" />
+      <workItem from="1598546738307" duration="4520000" />
     </task>
     <servers />
   </component>
@@ -270,6 +267,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update data and upload image to database" />
+    <option name="LAST_COMMIT_MESSAGE" value="update data and upload image to database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="397" y="7" key="#PHP" timestamp="1596869021717">

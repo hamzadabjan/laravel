@@ -7,6 +7,7 @@ use App\Http\Requests\storeRequest;
 use App\Offer;
 use App\Traits\OfferTrait;
 use App\User;
+use phpDocumentor\Reflection\Location;
 use \Validator;
 use LaravelLocalization;
 
@@ -97,7 +98,9 @@ class DataController extends Controller
     public function deleteOffer($offer_id){
 
         Offer::where('id', $offer_id)->delete();
-        return $offer_id;
+        return redirect()->back()->with('alert', 'Deleted!');
+
+
 
     }
 

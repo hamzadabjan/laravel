@@ -44,8 +44,9 @@ Route::get('data', 'DataController@getData');
     Route::get('all','DataController@getAllOffers');
     Route::get('edit/{offer_id}','DataController@editOffer')->name('edit.offer');
     Route::post('update/{offer_id}','DataController@updateOffer')->name('update.offer');
-    Route::get('delete/{offer_id}','DataController@editOffer')->name('delete.offer');
+    Route::get('delete/{offer_id}','DataController@deleteOffer')->name('delete.offer');
+
     });
 });
 
-
+Route::get('youtube','eventController@getVideo');
