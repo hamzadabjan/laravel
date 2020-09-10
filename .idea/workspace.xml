@@ -20,10 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60e7ea04-b952-4695-9461-578e90966486" name="Default Changelist" comment="update data and upload image to database">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/OfferAjaxController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1599038901.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1599039094.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1599124754.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1599124965.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ajaxoffers/createAjax.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ajaxoffers/editajax.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/OfferTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/OfferTrait.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,12 +164,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1fjsGl7OgLO8YSfopKJdSMkirpf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
@@ -171,24 +184,24 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel\resources\views" />
+      <recent name="C:\xampp\htdocs\laravel\resources\views\ajaxoffers" />
+      <recent name="C:\xampp\htdocs\laravel\app\Http\Requests" />
+      <recent name="C:\xampp\htdocs\laravel\public" />
+      <recent name="C:\xampp\htdocs\laravel\public\vendor" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laravel\app\OfferTrait" />
       <recent name="C:\xampp\htdocs\laravel\public\vendor" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\laravel\app\Http\Controllers\Front" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel\resources\views" />
-      <recent name="C:\xampp\htdocs\laravel\app\Http\Requests" />
-      <recent name="C:\xampp\htdocs\laravel\public" />
-      <recent name="C:\xampp\htdocs\laravel\public\vendor" />
-      <recent name="C:\xampp\htdocs\laravel\public\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,7 +262,27 @@
       <workItem from="1598095698055" duration="1240000" />
       <workItem from="1598111991788" duration="1628000" />
       <workItem from="1598120635786" duration="852000" />
-      <workItem from="1598546738307" duration="4520000" />
+      <workItem from="1598546738307" duration="5206000" />
+      <workItem from="1598735098017" duration="2190000" />
+      <workItem from="1598774349813" duration="663000" />
+      <workItem from="1598781196862" duration="695000" />
+      <workItem from="1598863813696" duration="80000" />
+      <workItem from="1598863944059" duration="4165000" />
+      <workItem from="1598871163390" duration="2072000" />
+      <workItem from="1598940536626" duration="1322000" />
+      <workItem from="1598942399902" duration="704000" />
+      <workItem from="1598943331847" duration="106000" />
+      <workItem from="1598943502307" duration="768000" />
+      <workItem from="1598945508815" duration="560000" />
+      <workItem from="1599037082479" duration="3031000" />
+      <workItem from="1599117221778" duration="6194000" />
+      <workItem from="1599288118299" duration="916000" />
+      <workItem from="1599370198570" duration="6009000" />
+      <workItem from="1599458822145" duration="3249000" />
+      <workItem from="1599564487206" duration="700000" />
+      <workItem from="1599629350591" duration="8704000" />
+      <workItem from="1599718481862" duration="4704000" />
+      <workItem from="1599732625071" duration="4268000" />
     </task>
     <servers />
   </component>
@@ -269,14 +302,23 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update data and upload image to database" />
     <option name="LAST_COMMIT_MESSAGE" value="update data and upload image to database" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="428" y="188" key="#Notifications" timestamp="1599125605300">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="428" y="188" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1599125605300" />
     <state x="397" y="7" key="#PHP" timestamp="1596869021717">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="397" y="7" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1596869021717" />
+    <state x="244" y="130" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598868319616">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="244" y="130" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598868319616" />
     <state x="441" y="223" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1597404082359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -309,22 +351,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598037006259" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1597403663908">
+    <state x="-151" y="18" key="SettingsEditor" timestamp="1599720076374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597403663908" />
+    <state x="-151" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599720076374" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598040030695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598040030695" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1597736464437">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1599723862181">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1597736464437" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598036980630">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599723862181" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599374346303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598036980630" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599374346303" />
     <state x="405" y="276" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596867875716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

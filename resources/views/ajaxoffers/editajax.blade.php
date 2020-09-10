@@ -29,34 +29,29 @@
 </head>
 <body>
 
-@if (session('alert'))
-    <div class="alert alert-success">
-        {{ session('alert') }}
-    </div>
-@endif
-
-<div class="alert alert-success" id="success_msg" style="display: none">
-    تم الحذف بنجاح
-</div>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
 
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
                     Language
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 
-                        <a class="dropdown-item"  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                           href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                             {{ $properties['native'] }}
                         </a>
 
@@ -70,44 +65,86 @@
     </div>
 </nav>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">{{trans('messages.offer name')}}</th>
-        {{--<th scope="col">{{trans('messages.offer name ar')}}</th>--}}
-        <th scope="col">{{trans('messages.offer price')}}</th>
-        {{--<th scope="col">{{trans('messages.offer details en')}}</th>--}}
-        <th scope="col">{{trans('messages.offer details')}}</th>
+<div class="alert alert-success" id="success_msg" style="display: none">
+    updated successfully
+</div>
 
-        <th scope="col">photo</th>
-        <th scope="col">{{trans('messages.options')}}</th>
-    </tr>
-    </thead>
-    <tbody>
+@if(Session::has('success'))
 
-    @foreach($offers as $offer)
-    <tr class="offerRow{{$offer -> id}}">
-        <th scope="row">{{$offer -> id}}</th>
-        {{--<td>{{$offer -> name_en}}</td>--}}
-        <td>{{$offer -> name}}</td>
-        <td>{{$offer -> price}}</td>
-        <td>{{$offer -> details}}</td>
-        <td><img src="/images/offers/{{$offer -> photo}}" height="60px" width="60px" border="5px" alt="null"/> </td>
-        <td><a href="{{route('delete.offer',['offer_id' => $offer -> id])}}" type="button" class="btn btn-danger">
-            {{trans('messages.delete')}}</a> - <a href="{{route('edit.offer',['offer_id' => $offer -> id])}}" type="button" class="btn btn-primary">{{trans('messages.edit')}}</a> -  <a href="" type="button"  offer_id="{{$offer -> id}}" class="edit_btn btn btn-danger">{{trans('messages.deleteajax')}}</a>-<a  href="{{route('ajax.offers.edit',$offer -> id)}}" type="button"   class=" btn btn-info">{{trans('messages.edtiajax')}}</a>
-               </td>
-        {{--<td>{{$offer -> details_ar}}</td>--}}
-    </tr>
-        @endforeach
+    <div class="alert alert-primary" role="alert">
+        {{Session::get('success')}}
+    </div>
+@endif
+<div class="container-contact100">
+    <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422"
+         data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
 
-    </tbody>
-</table>
+
+    <div class="wrap-contact100">
+        <form method="post" id="OfferFormUpdate" class="contact100-form">
+            @csrf
+            <span class="contact100-form-title">
+					{{trans('messages.edit data')}}
+				</span>
+
+            <input style="display: none" class="input100" type="text" name="offer_id" value="{{$offer->id}}">
+
+            <div class="wrap-input100 validate-input">
+                <input class="input100" type="text" name="name_en" value="{{$offer->name_en}}"
+                       placeholder="{{trans('messages.offer name en')}}">
+                <span class="focus-input100-1"></span>
+                <span class="focus-input100-2"></span>
+                {{--                @error('name_en')--}}
+                {{--                <small class="form-text text-danger">{{$message}}</small>--}}
+                {{--                @enderror--}}
+            </div>
+
+            <div class="wrap-input100 validate-input">
+                <input class="input100" type="text" name="name_ar" value="{{$offer->name_ar}}"
+                       placeholder="{{trans('messages.offer name ar')}}">
+                <span class="focus-input100-1"></span>
+                <span class="focus-input100-2"></span>
+                {{--                @error('name_ar')--}}
+                {{--                <small class="form-text text-danger">{{$message}}</small>--}}
+                {{--                @enderror--}}
+            </div>
+
+            <div class="wrap-input100 validate-input">
+                <input class="input100" type="text" value="{{$offer->price}}" name="price" placeholder="price">
+                <span class="focus-input100-1"></span>
+                <span class="focus-input100-2"></span>
+                {{--                @error('price')--}}
+                {{--                <small class="form-text text-danger">{{$message}}</small>--}}
+                {{--                @enderror--}}
+            </div>
+
+
+            <div class="wrap-input100 validate-input">
+                <input class="input100" type="text" name="details_en" value="{{$offer->details_en}}"
+                       placeholder="{{trans('messages.offer details en')}}"></input>
+                <span class="focus-input100-1"></span>
+                <span class="focus-input100-2"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input">
+                <input class="input100" type="text" name="details_ar" value="{{$offer->details_ar}}"
+                       placeholder="{{trans('messages.offer details ar')}}"></input>
+                <span class="focus-input100-1"></span>
+                <span class="focus-input100-2"></span>
+            </div>
+
+
+            <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn" id="update_offer">
+                    Update using Ajax
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
 
 
 <div id="dropDownSelect1"></div>
-
-
 
 <!--===============================================================================================-->
 <script src="{{URL::asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
@@ -133,7 +170,11 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'UA-23581568-13');
@@ -141,25 +182,21 @@
 
 <script>
 
-    $(document).on('click', '.delete_btn', function (e) {
+    $(document).on('click', '#update_offer', function (e) {
         e.preventDefault();
-
-        var offer_id = $(this).attr('offer_id');
-
+        var formData = new FormData($('#OfferFormUpdate')[0]);
         $.ajax({
             type: 'post',
-
-            url: "{{route('ajax.offers.delete')}}",
-            data: {
-                '_token': "{{csrf_token()}}",
-                'id': offer_id
-            },
-
+            enctype: 'multipart/form-data',
+            url: "{{route('ajax.offers.update')}}",
+            data: formData,
+            processData: false,
+            contentType: false,
+            cache: false,
             success: function (data) {
                 if (data.status == true) {
                     $('#success_msg').show();
-                    $('.offerRow'+data.id).remove();
-
+                    //$('#msg_div').text(data.msg);
                     //alert(data.msg);
                 }
             },
@@ -170,6 +207,7 @@
     });
 
 </script>
+
 
 </body>
 </html>

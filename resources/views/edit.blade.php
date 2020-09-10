@@ -123,7 +123,7 @@
 
             <div class="container-contact100-form-btn">
                 <button class="contact100-form-btn">
-                    Insert
+                    Update
                 </button>
             </div>
         </form>

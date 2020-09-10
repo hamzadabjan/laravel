@@ -75,6 +75,7 @@ class DataController extends Controller
         $offers = Offer::select('id',
             'name_'.LaravelLocalization::getCurrentLocale().' as name',
             'price',
+            'photo',
             'details_'.LaravelLocalization::getCurrentLocale().' as details'
         )
             ->get();
@@ -103,7 +104,5 @@ class DataController extends Controller
 
 
     }
-
-
 
 }

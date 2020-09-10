@@ -50,3 +50,16 @@ Route::get('data', 'DataController@getData');
 });
 
 Route::get('youtube','eventController@getVideo');
+
+######## Begin Ajax route ##########
+Route::group(['prefix'=>'ajax-offers'],function (){
+   Route::get('create','OfferAjaxController@create');
+   Route::post('store','OfferAjaxController@store')->name('ajax.offers.store');
+   Route::get('all','OfferAjaxController@all')->name('ajax.offers.all');
+   Route::post('delete','OfferAjaxController@delete')->name('ajax.offers.delete');
+    Route::get('edit/{offer_id}','OfferAjaxController@edit')->name('ajax.offers.edit');
+    Route::post('update','OfferAjaxController@update')->name('ajax.offers.update');
+});
+
+
+######## End Ajax route ##########
